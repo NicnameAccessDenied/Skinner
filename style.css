@@ -1,0 +1,41 @@
+.skin-render{
+	width:138px;
+	height:276px;
+	display:inline-block;
+	position:relative;
+	background-repeat:no-repeat;
+	background-position:0 0
+}
+
+.skin-render .skin-render-back,.skin-render .skin-render-front{
+	width:138px;
+	height:276px;
+	position:absolute;
+	top:0;
+	transition:.3s
+}
+
+.skin-render .skin-render-front{
+	left:0;
+	opacity:1
+}
+
+.skin-render .skin-render-back{
+	background-position:-138px 0;
+	left:-1px;
+	opacity:0;
+	-webkit-transform:rotateY(-180deg);
+	transform:rotateY(-180deg)
+}
+
+.skin-render:hover .skin-render-front{
+	-webkit-transform:rotateY(-180deg);
+	transform:rotateY(-180deg);
+	opacity:0
+}
+
+.skin-render:hover .skin-render-back{
+	-webkit-transform:rotateY(0);
+	transform:rotateY(0);
+	opacity:1
+}
